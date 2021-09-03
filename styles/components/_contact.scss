@@ -1,0 +1,71 @@
+.contact {
+  height: 100vh;
+  background-color: rgba(black, 0.8);
+  color: var(--white);
+  padding: 5rem;
+  font-family: "Uncial Antiqua", serif;
+  &--card {
+    width: 500px;
+    span {
+      font-size: 0.8em;
+      letter-spacing: 1px;
+    }
+    h1 {
+      letter-spacing: 1.2px;
+      word-spacing: 3px;
+      line-height: 1.5em;
+      margin-top: 1rem;
+    }
+    p {
+      font-family: "Raleway", sans-serif;
+      font-size: 0.8rem;
+      margin-bottom: 1.5rem;
+    }
+    input[type="text"] {
+      outline: none;
+      border: 0;
+      border-radius: 3px;
+      color: var(--white);
+      background-color: var(--bg-color);
+      display: block;
+      margin: 1rem 0;
+      height: 2.5rem;
+      padding-left: 1rem;
+      min-width: 200px;
+    }
+
+    .send {
+      position: relative;
+      margin-top: 2rem;
+      border-top: 1px solid white;
+      border-bottom: 1px solid white;
+      padding: 10px 0;
+      width: 200px;
+      cursor: pointer;
+      text-align: center;
+      transition: all ease-in-out 300ms;
+      &::after {
+        content: url("/images/icons/arrow-right-solid.svg");
+        position: absolute;
+      }
+      &:hover {
+        color: var(--grey);
+        text-shadow: -1px 2px 3px grey;
+      }
+    }
+
+    .checkbox {
+      margin: 1rem 0;
+    }
+
+    input[type="checkbox"] {
+      margin: 0.5rem 0 0.5rem;
+      outline: none;
+      border: 0;
+    }
+    label {
+      font-family: "Raleway", sans-serif;
+      font-size: 0.7rem;
+    }
+  }
+}

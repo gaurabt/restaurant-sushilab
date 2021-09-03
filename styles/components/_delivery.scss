@@ -1,0 +1,118 @@
+.delivery {
+  background-color: rgba(black, 0.8);
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Uncial Antiqua";
+  color: var(--white);
+  h1 {
+    margin-bottom: 2rem;
+  }
+  input[type="text"] {
+    display: block;
+    outline: none;
+    border: 0;
+    color: var(--grey);
+    background-color: var(--bg-color);
+    height: 2.5rem;
+    width: 100%;
+    margin-top: 1rem;
+    border-radius: 3px;
+    padding-left: 1rem;
+  }
+
+  .payment-method {
+    font-family: "Raleway";
+    margin: 2rem 0;
+
+    h2 {
+      font-weight: 300;
+      font-size: 1.4em;
+      margin: 1rem 0;
+    }
+
+    input[type="checkbox"] {
+      outline: none;
+      border: 0;
+      margin: 0.5rem 0.5rem 0.5rem;
+    }
+
+    label {
+      font-size: 0.8rem;
+    }
+  }
+
+  .button {
+    position: relative;
+    width: 200px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin: 1rem 0;
+    padding: 10px 0;
+    cursor: pointer;
+    text-align: center;
+    transition: all ease-in-out 300ms;
+    &::after {
+      content: url("/images/icons/arrow-right-solid.svg");
+      position: absolute;
+    }
+
+    &:hover {
+      color: var(--grey);
+      text-shadow: -1px 2px 3px rgba(grey, 0.8);
+    }
+  }
+  .user-basket {
+    font-size: 1.2em;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    .cart {
+      display: flex;
+      flex-direction: column;
+
+      .cart--item,
+      .total-price {
+        background-color: var(--bg-color);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2rem;
+        padding-bottom: 1rem;
+        img {
+          height: 200px;
+          width: 300px;
+        }
+        .item-info {
+          padding: 1rem 0;
+        }
+      }
+
+      .cart--item {
+        box-shadow: -1px 4px 6px rgba(grey, 0.5);
+        margin-bottom: 1.5rem;
+        &:hover {
+          transition: all ease-in-out 300ms;
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+}
+
+.arrow-left,
+.arrow-right {
+  margin: 0 0.5rem;
+  display: inline-block;
+  height: 0;
+  width: 0;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+}
+
+.arrow-left {
+  border-right: 5px solid white;
+}
+
+.arrow-right {
+  border-left: 5px solid white;
+}

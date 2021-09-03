@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SushiLab</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" defer></script>
+    <script src="script/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>SushiLab</h1>
+        <nav>
+            <img class="logo" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNTYuOTY2IDU2Ljk2NiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTYuOTY2IDU2Ljk2NjsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPHBhdGggZD0iTTU1LjE0Niw1MS44ODdMNDEuNTg4LDM3Ljc4NmMzLjQ4Ni00LjE0NCw1LjM5Ni05LjM1OCw1LjM5Ni0xNC43ODZjMC0xMi42ODItMTAuMzE4LTIzLTIzLTIzcy0yMywxMC4zMTgtMjMsMjMNCglzMTAuMzE4LDIzLDIzLDIzYzQuNzYxLDAsOS4yOTgtMS40MzYsMTMuMTc3LTQuMTYybDEzLjY2MSwxNC4yMDhjMC41NzEsMC41OTMsMS4zMzksMC45MiwyLjE2MiwwLjkyDQoJYzAuNzc5LDAsMS41MTgtMC4yOTcsMi4wNzktMC44MzdDNTYuMjU1LDU0Ljk4Miw1Ni4yOTMsNTMuMDgsNTUuMTQ2LDUxLjg4N3ogTTIzLjk4NCw2YzkuMzc0LDAsMTcsNy42MjYsMTcsMTdzLTcuNjI2LDE3LTE3LDE3DQoJcy0xNy03LjYyNi0xNy0xN1MxNC42MSw2LDIzLjk4NCw2eiIvPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPC9zdmc+DQo=">
+            <img class="logo" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE5LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJDYXBhXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgNDg5IDQ4OSIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNDg5IDQ4OTsiIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTQ0MC4xLDQyMi43bC0yOC0zMTUuM2MtMC42LTctNi41LTEyLjMtMTMuNC0xMi4zaC01Ny42QzM0MC4zLDQyLjUsMjk3LjMsMCwyNDQuNSwwcy05NS44LDQyLjUtOTYuNiw5NS4xSDkwLjMNCgkJYy03LDAtMTIuOCw1LjMtMTMuNCwxMi4zbC0yOCwzMTUuM2MwLDAuNC0wLjEsMC44LTAuMSwxLjJjMCwzNS45LDMyLjksNjUuMSw3My40LDY1LjFoMjQ0LjZjNDAuNSwwLDczLjQtMjkuMiw3My40LTY1LjENCgkJQzQ0MC4yLDQyMy41LDQ0MC4yLDQyMy4xLDQ0MC4xLDQyMi43eiBNMjQ0LjUsMjdjMzcuOSwwLDY4LjgsMzAuNCw2OS42LDY4LjFIMTc0LjlDMTc1LjcsNTcuNCwyMDYuNiwyNywyNDQuNSwyN3ogTTM2Ni44LDQ2Mg0KCQlIMTIyLjJjLTI1LjQsMC00Ni0xNi44LTQ2LjQtMzcuNWwyNi44LTMwMi4zaDQ1LjJ2NDFjMCw3LjUsNiwxMy41LDEzLjUsMTMuNXMxMy41LTYsMTMuNS0xMy41di00MWgxMzkuM3Y0MQ0KCQljMCw3LjUsNiwxMy41LDEzLjUsMTMuNXMxMy41LTYsMTMuNS0xMy41di00MWg0NS4ybDI2LjksMzAyLjNDNDEyLjgsNDQ1LjIsMzkyLjEsNDYyLDM2Ni44LDQ2MnoiLz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K" />
+            <ul class="nav--items">
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="delivery.html">Delivery</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        <span>8(000)000-00</span>
+        </nav>
+
+        <article>
+            <div class="info">
+                <p>Appetizing japanese dishes for you</p>
+                <div class="explore">EXPLORE SALE </div>  
+                
+            </div>
+            <div class="images">
+                <img src="images/header-image1.jpg" alt="">
+                <img src="images/header-image2.jpg" alt="">
+            </div>
+        </article>
+    </header>
+</body>
+</html>

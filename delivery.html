@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="delivery">
+        <div class="user-info">
+            <h1>ARRANGE DELIVERY</h1>
+            <input type="text" name="name" id="name" placeholder="Your name">
+            <input type="text" name="contact" id="contact" placeholder="98-- --- ---">
+            <input type="text" name="address" id="address" placeholder="Your address">
+
+            <div class="payment-method">
+                <h2>Payment Method:</h2>
+
+                <div>
+                    <input type="checkbox" name="cash" id="cash">
+                    <label for="cash">Ready money</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="apple-pay" id="apple-pay">
+                    <label for="apple-pay">Apple Pay</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="card" id="card">
+                    <label for="card">By card upon receipt</label>
+                </div>   
+                
+            </div>
+
+            <div class="button">ARRANGE</div>
+        </div>
+        <div class="user-basket">
+            <h1>YOUR BASKET</h1>
+            <div class="cart">
+                <div class="cart--item">
+                    <div class="item-info">
+                        <span>Nigiri</span>
+                        <div class="quantity">
+                            <div class="arrow-left"></div>
+                            <span>1</span>
+                            <div class="arrow-right"></div>
+                        </div>
+                        <span>11$</span>
+                    </div>
+                    <div class="item-image">
+                        <img src="images/nigiri.jpg" alt="nigiri">
+                    </div>
+                </div>
+                <div class="cart--item">
+                    <div class="item-info">
+                        <span>Uramaki</span>
+                        <div class="quantity">
+                            <div class="arrow-left"></div>
+                            <span>1</span>
+                            <div class="arrow-right"></div>
+                        </div>
+                        <span>10$</span>
+                    </div>
+                    <div class="item-image">
+                        <img src="images/uramaki.jpg" alt="nigiri">
+                    </div>
+                </div>
+                <div class="total-price">
+                    <span class="total">Total:</span>
+                    <span>21$</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
