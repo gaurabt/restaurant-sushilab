@@ -39,14 +39,13 @@ header {
         &:hover {
           color: var(--grey);
           cursor: pointer;
-          font-size: 1.2em;
         }
       }
     }
   }
   article {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
     height: 100%;
     padding: 1.5rem 0;
 
@@ -54,7 +53,7 @@ header {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-width: 50%;
+      width: 50%;
       height: 70vh;
       p {
         text-align: right;
@@ -96,5 +95,48 @@ header {
         box-shadow: -2px 2px 5px rgba(black, 0.6);
       }
     }
+  }
+}
+
+.hamburger__bar {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  display: none;
+  margin-left: auto;
+  margin-top: 1rem;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger__bar::before,
+.hamburger__bar::after {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger__bar::before {
+  transform: translateY(-5px);
+}
+
+.hamburger__bar::after {
+  transform: translateY(5px);
+}
+
+.open {
+  .hamburger__bar {
+    transform: translateX(-20px);
+    background: transparent;
+  }
+
+  .hamburger__bar::before {
+    transform: rotate(45deg) translate(10px, -10px);
+  }
+
+  .hamburger__bar::after {
+    transform: rotate(-45deg) translate(10px, 10px);
   }
 }
