@@ -102,4 +102,48 @@
       }
     }
   }
+
+  .delivery {
+    padding: 1rem;
+    flex-direction: column-reverse;
+    gap: 6rem;
+    font-size: 0.8rem;
+    .user-basket {
+      .cart {
+        .cart--item,
+        .total-price {
+          padding: 1rem;
+          img {
+            height: 150px;
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  .about {
+    padding: 1rem;
+    flex-direction: column;
+    height: 100%;
+
+    .image {
+      width: 100%;
+    }
+
+    .intro {
+      justify-content: space-around;
+      padding: 0;
+    }
+  }
+
+  .contact {
+    padding: 3rem 1rem;
+    h1 {
+      font-size: 1.5em;
+    }
+    &--card {
+      width: 90vw;
+    }
+  }
 }

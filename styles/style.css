@@ -83,6 +83,9 @@ header article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   gap: 2rem;
   height: 100%;
   padding: 1.5rem 0;
@@ -141,17 +144,14 @@ header article .info .explore:hover::after {
 }
 
 header article .images {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 70vh;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
   gap: 1.2rem;
 }
 
 header article .images img {
+  height: 70vh;
   -webkit-box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.6);
           box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.6);
 }
@@ -562,7 +562,7 @@ header article .images img {
 
 .delivery .user-basket {
   font-size: 1.2em;
-  width: 500px;
+  width: clamp(500px, 100vw);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -591,8 +591,7 @@ header article .images img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 0 2rem;
-  padding-bottom: 1rem;
+  padding: 1rem 2rem;
 }
 
 .delivery .user-basket .cart .cart--item img,
@@ -749,6 +748,49 @@ header article .images img {
   }
   .menu .menu--items .active {
     border-bottom: 1px solid black;
+  }
+  .delivery {
+    padding: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    gap: 6rem;
+    font-size: 0.8rem;
+  }
+  .delivery .user-basket .cart .cart--item,
+  .delivery .user-basket .cart .total-price {
+    padding: 1rem;
+  }
+  .delivery .user-basket .cart .cart--item img,
+  .delivery .user-basket .cart .total-price img {
+    height: 150px;
+    width: 200px;
+  }
+  .about {
+    padding: 1rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+  .about .image {
+    width: 100%;
+  }
+  .about .intro {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding: 0;
+  }
+  .contact {
+    padding: 3rem 1rem;
+  }
+  .contact h1 {
+    font-size: 1.5em;
+  }
+  .contact--card {
+    width: 90vw;
   }
 }
 /*# sourceMappingURL=style.css.map */

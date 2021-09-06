@@ -11,11 +11,12 @@ const menuBtn = document.querySelector('.hamburger')
 const nav = document.querySelector('nav')
 const article = document.querySelector('article')
 
-let isOpen = false
 
 
 //menu button///////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
+
+let isOpen = false
 
 menuBtn.addEventListener('click',() =>{
 
